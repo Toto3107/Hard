@@ -1,10 +1,4 @@
-Here’s a single-copy README and a `.gitignore` you can drop into `raksh-bb/`.
 
-***
-
-# README.md
-
-```markdown
 # RaKsh Borewell Decision Support Backend
 
 RaKsh is a backend service that predicts **borewell feasibility and depth** for a given location, stores predictions per user, and lets you record actual drilling outcomes later. It is built with **FastAPI**, **PostgreSQL**, **Docker**, and a trained **ML model**. [web:191][web:192]
