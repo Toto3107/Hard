@@ -1,0 +1,37 @@
+
+services:
+  db:
+    image: postgres:16
+    container_name: raksh_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: raksh_db
+      POSTGRES_USER: raksh_user
+      POSTGRES_PASSWORD: raksh_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U raksh_user -d raksh_db"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  api:
+    build: .
+    container_name: raksh_api
+    restart: unless-stopped
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app/app
+      - ./models:/app/models
+
+volumes:
+  postgres_data:

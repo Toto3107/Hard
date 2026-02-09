@@ -1,0 +1,44 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+*.log
+.env
+.env.*
+venv/
+.envrc
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
+
+# Byte-compiled / caches
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local data / models (if you don't want to track large binaries)
+# Uncomment if models are large and you prefer not to version them:
+# models/*.joblib
+# models/*.pkl
+
+# Docker
+*.pid
+*.sock
+# If you generate extra local-only files:
+# docker-compose.override.yml
+
+# OS-specific
+Thumbs.db
+Desktop.ini

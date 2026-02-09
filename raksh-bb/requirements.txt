@@ -1,0 +1,31 @@
+# Core API
+fastapi==0.115.0
+uvicorn[standard]==0.30.0
+
+# Data & ML
+numpy==2.2.6
+pandas==2.2.3
+scikit-learn==1.6.1
+joblib==1.4.2
+
+# DB & config
+SQLAlchemy==2.0.29
+psycopg2-binary==2.9.9
+python-dotenv==1.0.1
+
+# Pydantic (with email support)
+pydantic[email]==2.10.6
+pydantic-settings==2.7.0
+email-validator==2.2.0
+# (EmailStr uses email-validator under the hood) [web:149][web:150]
+
+python-multipart 
+
+# Auth / security
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1  # stay <4.1.0 for passlib compatibility [web:128][web:157]
+python-jose[cryptography]==3.3.0
+
+# Optional: if you later add testing
+# httpx==0.27.0
+# pytest==8.1.0
